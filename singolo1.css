@@ -1,0 +1,157 @@
+/*------------Basic setup--------------*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+}
+
+.wrap {
+    max-width: 1020px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/*------------Header--------------*/
+
+header {
+    min-height: 95px;
+    /* background: #2d303a; */
+    background: #1cb90e;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+header::after {
+    content: '';
+    display: block;
+    min-height: 6px;
+    background: #323746;
+    margin-top: 89px;
+}
+
+header h1 span {
+    color: #f06c64;
+}
+
+.logo {
+    width: 120px;
+}
+
+.logo h1 {
+    padding-top: 29px;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-top: 37px;
+    margin-left: 26px;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li a:active {
+    color: #f06c64;
+}
+
+
+/*------------Section slider--------------*/
+
+.slider {
+    background: #f06c64;
+    min-height: 600px;
+}
+
+.slider::after {
+    content: '';
+    display: block;
+    min-height: 6px;
+    background: #ea676b;
+    margin-top: -6px;
+}
+
+.main-block {
+    margin: 0 -1%;
+    min-height: 600px;
+}
+
+.block-70 {
+    float: left;
+    width: 6.25%;
+    margin: 0 1%;
+    min-height: 600px;
+}
+
+.block-800 {
+    float: left;
+    width: 83.5%;
+    margin-top: 53px;
+}
+
+.left-arrow,
+.right-arrow {
+    position: relative;
+}
+
+.left-arrow-img {
+    position: absolute;
+    margin-right: 5px;
+    margin-top: 281px;
+}
+
+.right-arrow-img {
+    position: absolute;
+    margin-top: 281px;
+    left: 43px;
+}
+
+
+/*------------Section our services--------------*/
+
+.our-services {
+    background: #f2f2f2;
+    min-height: 500px;
+    color: #666d89;
+    padding-top: 59px;
+
+}
+
+.our-services h2 {
+    font-size: 30px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.our-services p {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 30px;
+    word-spacing: 1px;
+    letter-spacing: 0.01px;
+}
+
+.our-services p span {
+    word-spacing: -0.1px;
+}
