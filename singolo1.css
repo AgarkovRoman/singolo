@@ -127,7 +127,6 @@ nav ul li a:active {
     left: 43px;
 }
 
-
 /*------------Section our services--------------*/
 
 .our-services {
@@ -135,7 +134,6 @@ nav ul li a:active {
     min-height: 500px;
     color: #666d89;
     padding-top: 59px;
-
 }
 
 .our-services h2 {
@@ -150,8 +148,49 @@ nav ul li a:active {
     line-height: 30px;
     word-spacing: 1px;
     letter-spacing: 0.01px;
+    margin-bottom: 44px;
 }
 
 .our-services p span {
     word-spacing: -0.1px;
+}
+
+.service-features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+}
+
+.feature-text h3 {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 900;
+    margin-bottom: 11px;
+    margin-left: 4px;
+}
+
+.feature-text p {
+    width: 223px;
+    height: auto;
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: left;
+    margin-bottom: 29px;
+    margin-left: 5px;
+    word-spacing: 5px;
+}
+
+.feature-text p .specific-text {
+    word-spacing: 0.01px;
+}
+
+.feature-img img {
+    margin-right: 17px;
+    margin-top: 3px;
 }
