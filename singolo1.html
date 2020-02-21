@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="singolo1.css">
     <title>Singolo</title>
 </head>
 
-<body>
+<body class="wraper">
     <header>
         <nav class="wrap">
             <div class="logo clearfix">
-                <h1>Singolo<span>*</span></h1>
+                <a href="#">
+                    <h1>Singolo<span>*</span></h1>
+                </a>
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="#" class="nav-link active-link">Home</a></li>
+                <li><a href="#" class="nav-link">Services</a></li>
+                <li><a href="#" class="nav-link">Portfolio</a></li>
+                <li><a href="#" class="nav-link">About</a></li>
+                <li><a href="#" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -35,7 +37,8 @@
                         </div>
                     </div>
                     <div class="iphone block-800">
-                        <img src="./assets/iPhone.png" alt="iphone">
+                        <img class="iphone-vertical" src="./assets/iPhone Vertical.png" alt="iphone vertical">
+                        <img class="iphone-horizontal" src="./assets/iPhone Horizontal.png" alt="iphone horizontal">
                     </div>
                     <div class="block-70">
                         <div class="right-arrow">
@@ -48,59 +51,67 @@
         <section class="our-services">
             <div class="wrap">
                 <h2>Our Services</h2>
-                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus,
+                <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis,
+                    non commodo luctus,
                     nisi erat porttitor ligula, <span>eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus
                         commodo, tortor mauris condimentum nibh.</span>
                 </p>
                 <div class="service-features">
                     <div class="feature">
                         <div class="feature-img">
-                            <img src="./assets/pen.png" alt="">
+                            <img src="./assets/pen.png" alt="pen">
                         </div>
                         <div class="feature-text">
                             <h3>Custom Design</h3>
-                            <p>Curabitur vestibulum eget mauris quis <span class="specific-text">laoreet.
-                                    Phasellus in
-                                    quam laoreet,
-                                    viverra
-                                    lacus
-                                    ut,
-                                    ultrices velit.</span></p>
+                            <p>Curabitur vestibulum eget mauris quis laoreet.
+                                Phasellus in
+                                quam laoreet,
+                                viverra
+                                lacus
+                                ut,
+                                ultrices velit.</p>
                         </div>
                     </div>
                     <div class="feature">
                         <div class="feature-img">
-                            <img src="./assets/bulb.png" alt="">
+                            <img class="second-img" src="./assets/bulb.png" alt="bulb">
                         </div>
                         <div class="feature-text">
                             <h3>Inovative Ideas</h3>
-                            <p>Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus
+                            <p>Quisque luctus, quam eget molestie commodo, lacus purus
+                                cursus
+                                purus,
+                                nec rutrum tellus
                                 dolor id lorem.</p>
                         </div>
                     </div>
                     <div class="feature">
                         <div class="feature-img">
-                            <img src="./assets/heart.png" alt="">
+                            <img src="./assets/heart.png" alt="heart">
                         </div>
                         <div class="feature-text">
-                            <h3>Love Is The Answer</h3>
-                            <p>Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.
+                            <h3 class="feature-title">Love Is The Answer</h3>
+                            <p class="feature-copy">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis,
+                                et
+                                consequat felis.
                                 Quisque condimentum.</p>
                         </div>
                     </div>
                     <div class="feature">
                         <div class="feature-img">
-                            <img src="./assets/phone.png" alt="">
+                            <img src="./assets/phone.png" alt="phone">
                         </div>
                         <div class="feature-text">
                             <h3>Responsive Layout</h3>
-                            <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent
+                            <p>Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit
+                                nunc ligula.
+                                Praesent
                                 elit leo.</p>
                         </div>
                     </div>
                     <div class="feature">
                         <div class="feature-img">
-                            <img src="./assets/bubble.png" alt="">
+                            <img src="./assets/bubble.png" alt="bubbes">
                         </div>
                         <div class="feature-text">
                             <h3>24 / 7 Support</h3>
@@ -110,11 +121,12 @@
                     </div>
                     <div class="feature">
                         <div class="feature-img">
-                            <img src="./assets/star.png" alt="">
+                            <img src="./assets/star.png" alt="star">
                         </div>
                         <div class="feature-text">
-                            <h3>Feel Like A Star</h3>
-                            <p>Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam
+                            <h3 class="feature-title">Feel Like A Star</h3>
+                            <p class="feature-copy">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
+                                Fusce vitae aliquam
                                 tellus.</p>
                         </div>
                     </div>

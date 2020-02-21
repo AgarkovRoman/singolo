@@ -17,9 +17,12 @@ body {
     height: 0;
 }
 
-.wrap {
+.wraper {
     max-width: 1020px;
     margin: 0 auto;
+}
+
+.wrap {
     padding: 0 40px;
 }
 
@@ -27,8 +30,7 @@ body {
 
 header {
     min-height: 95px;
-    /* background: #2d303a; */
-    background: #1cb90e;
+    background: #2d303a;
     color: #fff;
     text-transform: uppercase;
 }
@@ -49,6 +51,11 @@ header h1 span {
     width: 120px;
 }
 
+.logo a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .logo h1 {
     padding-top: 29px;
 }
@@ -56,26 +63,42 @@ header h1 span {
 nav ul {
     float: right;
     list-style: none;
+
 }
 
 nav li {
     display: inline-block;
-    margin-top: 37px;
+    margin-top: 38px;
     margin-left: 26px;
+    position: relative;
 }
 
-nav ul li a:link,
-nav ul li a:visited {
+nav li:not(:last-child):after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: #494e62;
+    height: 3px;
+    width: 3px;
+    border-radius: 50%;
+    top: 11px;
+    right: -17px;
+}
+
+.nav-link {
     color: #fff;
     font-size: 12px;
     text-decoration: none;
 }
 
-nav ul li a:hover,
-nav ul li a:active {
+.nav-link:hover,
+.nav-link:active {
     color: #f06c64;
 }
 
+.active-link {
+    color: #f06c64;
+}
 
 /*------------Section slider--------------*/
 
@@ -108,6 +131,18 @@ nav ul li a:active {
     float: left;
     width: 83.5%;
     margin-top: 53px;
+    position: relative;
+}
+
+.iphone-vertical {
+    position: absolute;
+    left: 2px;
+}
+
+.iphone-horizontal {
+    position: absolute;
+    left: 315px;
+    top: 121px;
 }
 
 .left-arrow,
@@ -117,15 +152,18 @@ nav ul li a:active {
 
 .left-arrow-img {
     position: absolute;
-    margin-right: 5px;
-    margin-top: 281px;
+    top: 281px;
+    left: 2px;
+    cursor: pointer;
 }
 
 .right-arrow-img {
     position: absolute;
-    margin-top: 281px;
-    left: 43px;
+    top: 281px;
+    left: 44px;
+    cursor: pointer;
 }
+
 
 /*------------Section our services--------------*/
 
@@ -136,10 +174,20 @@ nav ul li a:active {
     padding-top: 59px;
 }
 
+.our-services:after {
+    content: '';
+    display: block;
+    min-height: 6px;
+    background: #fff;
+    margin-top: 29px;
+}
+
 .our-services h2 {
     font-size: 30px;
     font-weight: 900;
     margin-bottom: 18px;
+    height: 36px;
+    overflow: hidden;
 }
 
 .our-services p {
@@ -149,6 +197,8 @@ nav ul li a:active {
     word-spacing: 1px;
     letter-spacing: 0.01px;
     margin-bottom: 44px;
+    overflow: hidden;
+    height: 60px;
 }
 
 .our-services p span {
@@ -164,6 +214,13 @@ nav ul li a:active {
 .feature {
     display: flex;
     justify-content: center;
+    margin-bottom: 39px;
+}
+
+.feature-text {
+    height: 85px;
+    overflow: hidden;
+    position: relative;
 }
 
 .feature-text h3 {
@@ -171,7 +228,15 @@ nav ul li a:active {
     line-height: 18px;
     font-weight: 900;
     margin-bottom: 11px;
-    margin-left: 4px;
+    margin-left: 5px;
+    height: 18px;
+    width: 220px;
+    overflow: hidden;
+}
+
+.feature-text h3 .feature-title {
+    right: -4px;
+    position: absolute;
 }
 
 .feature-text p {
@@ -181,16 +246,10 @@ nav ul li a:active {
     line-height: 22px;
     font-weight: 400;
     text-align: left;
-    margin-bottom: 29px;
-    margin-left: 5px;
-    word-spacing: 5px;
-}
-
-.feature-text p .specific-text {
-    word-spacing: 0.01px;
+    padding-left: 5px;
 }
 
 .feature-img img {
-    margin-right: 17px;
+    margin-right: 16px;
     margin-top: 3px;
 }
