@@ -171,7 +171,15 @@ nav ul li a:active {
     line-height: 18px;
     font-weight: 900;
     margin-bottom: 11px;
+}
+
+.feature-text .first-title {
     margin-left: 4px;
+}
+
+
+.feature-text .third-title {
+    padding-left: 3px;
 }
 
 .feature-text p {
@@ -181,16 +189,53 @@ nav ul li a:active {
     line-height: 22px;
     font-weight: 400;
     text-align: left;
+}
+
+.feature-text .first-copy {
     margin-bottom: 29px;
     margin-left: 5px;
     word-spacing: 5px;
 }
 
-.feature-text p .specific-text {
+.feature-text .first-copy .specific-text {
     word-spacing: 0.01px;
 }
+
+.feature-text .second-copy {
+    line-height: 21px;
+}
+
+.feature-text .second-copy .specific-text-two {
+    word-spacing: 6px;
+    letter-spacing: 0.1px;
+}
+
+.feature-text .third-copy {
+    padding-left: 2px;
+    word-spacing: 2px;
+}
+
+.feature-text .third-copy .specific-text-three {
+    word-spacing: 0.3px;
+}
+
+
+
+
+.feature-four {
+    word-spacing: 0px;
+    line-height: 21px;
+}
+
+
+
+
 
 .feature-img img {
     margin-right: 17px;
     margin-top: 3px;
 }
+
+/* .second-img {
+    padding-right: 7px;
+} */
