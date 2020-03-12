@@ -11,19 +11,19 @@
 </head>
 
 <body class="wraper">
-    <header class="wrap">
+    <header class="wrap" id="home">
         <div class="logo clearfix">
-            <a href="#">
-                <h1>Singolo<span>*</span></h1>
+            <a href="#home">
+                <h1 class="logo-h1">Singolo</h1>
             </a>
         </div>
         <nav class="header-nav">
-            <ul>
-                <li><a href="#" class="nav-link active-link">Home</a></li>
-                <li><a href="#" class="nav-link">Services</a></li>
-                <li><a href="#" class="nav-link">Portfolio</a></li>
-                <li><a href="#" class="nav-link">About</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
+            <ul id="navigation">
+                <li><a href="#home" class="nav-link active-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -31,22 +31,29 @@
         <section class="slider wrap">
             <div class="main-block">
                 <div class="block-70">
-                    <div class="left-arrow">
+                    <div class="left-arrow" id="left-arrow">
                         <img class="left-arrow-img" src="./assets/arrow left.png" alt="left arrow">
                     </div>
                 </div>
-                <div class="iphone block-800">
-                    <img class="iphone-vertical" src="./assets/iPhone Vertical.png" alt="iphone vertical">
-                    <img class="iphone-horizontal" src="./assets/iPhone Horizontal.png" alt="iphone horizontal">
+                <div class="block-800" id="main-slider">
+                    <div class="slide-single">
+                        <img class="iphone-vertical" src="./assets/iPhone Vertical.png" alt="iphone vertical">
+                        <img class="iphone-horizontal" src="./assets/iPhone Horizontal.png" alt="iphone horizontal">
+                    </div>
+                    <div class="slide-single">
+                        <img class="iphone-right" src="./assets/slider-content-1.png" alt="iphone ">
+                        <img class="iphone-midle" src="./assets/slider-content-2.png" alt="iphone ">
+                        <img class="iphone-left" src="./assets/slider-content.png" alt="iphone ">
+                    </div>
                 </div>
                 <div class="block-70">
-                    <div class="right-arrow">
+                    <div class="right-arrow" id="right-arrow">
                         <img class="right-arrow-img" src="./assets/arrow right.png" alt="right arrow">
                     </div>
                 </div>
             </div>
         </section>
-        <section class="our-services wrap">
+        <section class="our-services wrap" id="services">
             <h2>Our Services</h2>
             <p class="our-services-copy">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis,
@@ -130,15 +137,15 @@
                 </div>
             </div>
         </section>
-        <section class="portfolio wrap">
+        <section class="portfolio wrap" id="portfolio">
             <h2>Portfolio</h2>
             <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
             <nav class="portfolio-nav">
-                <ul>
-                    <li><a href="#" class="portfolio-link portfolio-active-link">All</a></li>
-                    <li><a href="#" class="portfolio-link">Web Design</a></li>
-                    <li><a href="#" class="portfolio-link">Graphic Design</a></li>
-                    <li><a href="#" class="portfolio-link">Artwork</a></li>
+                <ul id="portfolio-nav">
+                    <li class="portfolio-link portfolio-active-link">All</li>
+                    <li class="portfolio-link">Web Design</li>
+                    <li class="portfolio-link">Graphic Design</li>
+                    <li class="portfolio-link">Artwork</li>
                 </ul>
             </nav>
             <ul class="container">
@@ -192,7 +199,7 @@
                 </li>
             </ul>
         </section>
-        <section class="about-us wrap">
+        <section class="about-us wrap" id="about">
             <h2>About Us</h2>
             <p class="about-us-description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis
                 mollis,
@@ -335,7 +342,7 @@
                 </div>
             </div>
         </section>
-        <section class="quota wrap">
+        <section class="quota wrap" id="contact">
             <h2>Get a Quote</h2>
             <p>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi
                 erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor
@@ -348,7 +355,7 @@
                         <input class="input" type="text" placeholder="Subject">
                         <textarea class="input textarea" name="describe" id="" cols="30" rows="9"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button class="button" type="submit">Submit</button>
+                        <button class="button" type="submit" id="button">Submit</button>
                     </form>
                 </div>
                 <div class="contact-info">
@@ -411,6 +418,7 @@
             </ul>
         </footer>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>

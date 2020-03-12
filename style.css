@@ -36,10 +36,6 @@ header {
     border-bottom: 6px solid #323746;
 }
 
-header h1 span {
-    color: #f06c64;
-}
-
 .logo {
     width: 120px;
     font-size: 12px;
@@ -50,8 +46,13 @@ header h1 span {
     color: #fff;
 }
 
-.logo h1 {
+.logo-h1 {
     padding-top: 29px;
+}
+
+.logo-h1::after {
+    content: '*';
+    color: #f06c64;
 }
 
 .header-nav ul {
@@ -101,6 +102,11 @@ header h1 span {
     border-bottom: 6px solid #ea676b;
 }
 
+.bg_blue {
+    background: #648BF0;
+    border-bottom: 6px solid #648BF0;
+}
+
 .main-block {
     margin: 0 -1%;
     min-height: 564px;
@@ -116,21 +122,52 @@ header h1 span {
 .block-800 {
     float: left;
     width: 83.5%;
-    margin-top: 53px;
     position: relative;
     min-height: 564px;
+    overflow: hidden;
+}
+
+.slide-single {
+    width: 800px;
+    height: 100%;
+    position: absolute;
+    transition: all ease 1s;
 }
 
 .iphone-vertical {
     position: absolute;
     left: 2px;
+    top: 53px;
 }
 
 .iphone-horizontal {
     position: absolute;
     left: 315px;
-    top: 121px;
+    top: 174px;
 }
+
+.iphone-right {
+    position: absolute;
+    left: 502px;
+    top: 152px;
+}
+
+.iphone-midle {
+    position: absolute;
+    left: 273px;
+    top: 43px;
+}
+
+.iphone-left {
+    position: absolute;
+    left: 142px;
+    top: 152px;
+}
+
+
+
+
+
 
 .left-arrow,
 .right-arrow {
@@ -158,6 +195,7 @@ header h1 span {
     color: #666d89;
     padding-top: 59px;
     border-bottom: 6px solid #fff;
+    scroll-behavior: auto;
 }
 
 .our-services h2 {
@@ -177,6 +215,7 @@ header h1 span {
     margin-bottom: 44px;
     overflow: hidden;
     height: 60px;
+    text-align: justify;
 }
 
 .our-services .our-services-copy span {
@@ -272,6 +311,7 @@ ul {
     border: 1px solid #666d89;
     border-radius: 4px;
     margin-right: 9px;
+    cursor: pointer;
 }
 
 .portfolio-link:hover {
@@ -325,10 +365,10 @@ ul {
     font-weight: 300;
     font-size: 18px;
     margin-bottom: 48px;
-    line-height: 10px;
     line-height: 30px;
     overflow: hidden;
     height: 57px;
+    text-align: justify;
 }
 
 .employeers {
@@ -360,6 +400,7 @@ ul {
     line-height: 1.8;
     overflow: hidden;
     height: 38px;
+    text-align: justify;
 }
 
 .social-icons {
@@ -404,6 +445,7 @@ ul {
     line-height: 30px;
     overflow: hidden;
     height: 56px;
+    text-align: justify;
 }
 
 .quota-container {
@@ -426,6 +468,10 @@ ul {
 
 .contact-info {
     width: 31.9%;
+}
+
+.contact-info p {
+    text-align: justify;
 }
 
 .input {
