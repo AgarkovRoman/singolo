@@ -138,12 +138,38 @@ header {
     position: absolute;
     left: 2px;
     top: 53px;
+    cursor: pointer;
+}
+
+.black-screen-vertical {
+    height: 335px;
+    width: 190px;
+    position: absolute;
+    left: 15px;
+    top: 117px;
+    background: rgb(15, 15, 17);
+    z-index: 1;
+    border-radius: 1px;
+    cursor: pointer;
 }
 
 .iphone-horizontal {
     position: absolute;
     left: 315px;
     top: 174px;
+    cursor: pointer;
+}
+
+.black-screen-horizontal {
+    height: 190px;
+    width: 335px;
+    position: absolute;
+    left: 374px;
+    top: 187px;
+    background: rgb(15, 15, 17);
+    z-index: 1;
+    border-radius: 1px;
+    cursor: pointer;
 }
 
 .iphone-right {
@@ -164,11 +190,6 @@ header {
     top: 152px;
 }
 
-
-
-
-
-
 .left-arrow,
 .right-arrow {
     position: relative;
@@ -186,6 +207,18 @@ header {
     top: 281px;
     left: 44px;
     cursor: pointer;
+}
+
+.right-arrow-img:hover {
+    zoom: 120%;
+    top: 230px;
+    left: 35px;
+}
+
+.left-arrow-img:hover {
+    zoom: 120%;
+    top: 230px;
+    left: 2px;
 }
 
 /*------------Section our services--------------*/
@@ -524,6 +557,45 @@ ul {
 
 .button:hover {
     background: #972f2a;
+}
+
+.message-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-text {
+    width: 30vw;
+    min-height: 100px;
+    position: absolute;
+    border: 1px solid #972f2a;
+    background: #bb4a44;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.message-text span {
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #f0d8d9;
+}
+
+.message-text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #220808;
+}
+
+.hidden {
+    display: none;
 }
 
 .contact-info h3 {

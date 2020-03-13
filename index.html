@@ -349,13 +349,22 @@
                 mauris condimentum nibh.</p>
             <div class="quota-container">
                 <div class="form-container">
-                    <form class="form" action="">
-                        <input class="input" type="text" placeholder="Name (Required)" required>
-                        <input class="input" type="email" placeholder="Email (Required)" required>
-                        <input class="input" type="text" placeholder="Subject">
-                        <textarea class="input textarea" name="describe" id="" cols="30" rows="9"
+                    <form class="form" id="form" action="">
+                        <input class="input" type="text" id="name" placeholder="Name (Required)" required>
+                        <input class="input" type="email" id="email" placeholder="Email (Required)" autocomplete="on"
+                            required>
+                        <input class="input" id="subject-input" type="text" placeholder="Subject">
+                        <textarea class="input textarea" id="textarea-input" name="describe" id="" cols="30" rows="9"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button class="button" type="submit" id="button">Submit</button>
+                        <button class="button" id="submit-button">Submit</button>
+                        <div class="message-block hidden" id="message-block">
+                            <div class="message-text">
+                                <h3>Письмо отправлено</h3>
+                                <p>Тема:<br><span id="subject-result"></span></p>
+                                <p>Описание:<br><span id="description-result"></span></p>
+                                <button class="button" id="close-button">Ok</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
                 <div class="contact-info">
