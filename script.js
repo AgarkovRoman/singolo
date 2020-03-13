@@ -137,29 +137,31 @@ function removeHorizontalHTML() {
     blackScreenH.parentNode.removeChild(blackScreenH);
 }
 
+/*----------form submit--------------*/
+const BUTTON = document.getElementById('submit-button');
+const CLOSE_BUTTON = document.getElementById('close-button');
 
+BUTTON.addEventListener('click', () => {
+    if (document.getElementById('name').value !== '' && document.getElementById('email').value !== '') {
+        const subject = document.getElementById('subject-input').value.toString();
+        if (subject !== '') {
+            const subjectResult = document.getElementById('subject-result').innerText = subject;
+        } else {
+            document.getElementById('subject-result').innerText = 'Без темы';
+        }
+        const description = document.getElementById('textarea-input').value.toString();
+        if (description !== '') {
+            const descriptionResult = document.getElementById('description-result').innerText = description;
+        } else {
+            document.getElementById('description-result').innerText = 'Без описания';
+        }
+        document.querySelector('.message-block').classList.remove('hidden');
+        // document.getElementById('form').reset();
+    }
+})
 
-
-
-
-
-
-
-
-
-
-
-
-
-// const BUTTON = document.getElementById('button');
-// const CLOSE_BUTTON = document.getElementById('close_button');
-
-// BUTTON.addEventListener('click', () => {
-//     MENU.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
-//     event.target.classList.add('active-link');
-// })
-
-// CLOSE_BUTTON.addEventListener('click', () => {
-//     MENU.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
-//     event.target.classList.add('active-link');
-// })
+CLOSE_BUTTON.addEventListener('click', () => {
+    document.getElementById('subject-result').innerText = '';
+    document.getElementById('description-result').innerText = '';
+    document.querySelector('.message-block').classList.add('hidden');
+})

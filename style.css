@@ -559,6 +559,45 @@ ul {
     background: #972f2a;
 }
 
+.message-block {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: #0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message-text {
+    width: 30vw;
+    min-height: 100px;
+    position: absolute;
+    border: 1px solid #972f2a;
+    background: #bb4a44;
+    padding: 10px;
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.message-text span {
+    margin-bottom: 3px;
+    font-size: 14px;
+    color: #f0d8d9;
+}
+
+.message-text p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #220808;
+}
+
+.hidden {
+    display: none;
+}
+
 .contact-info h3 {
     letter-spacing: -0.3px;
     margin-bottom: 8px;
