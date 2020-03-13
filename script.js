@@ -156,7 +156,7 @@ BUTTON.addEventListener('click', () => {
             document.getElementById('description-result').innerText = 'Без описания';
         }
         document.querySelector('.message-block').classList.remove('hidden');
-        // document.getElementById('form').reset();
+        document.getElementById('form').reset();
     }
 })
 
