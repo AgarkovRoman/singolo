@@ -325,6 +325,7 @@ header {
 
 .portfolio-nav {
     margin-bottom: 22px;
+    user-select: none;
 }
 
 ul {

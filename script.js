@@ -7,11 +7,31 @@ MENU.addEventListener('click', (event) => {
 })
 
 PORTFOLIO.addEventListener('click', (event) => {
-    PORTFOLIO.querySelectorAll('li').forEach(elem => elem.classList.remove('portfolio-active-link'));
     if (event.target.tagName === 'LI') {
+        PORTFOLIO.querySelectorAll('li').forEach(elem => elem.classList.remove('portfolio-active-link'));
         event.target.classList.add('portfolio-active-link');
+        shuffleArray();
     }
 })
+
+const shuffleArray = () => {
+    //создание нодлиста
+    let portfolioList = document.querySelectorAll('.container li:nth-child(-n+12)');
+    console.log(portfolioList);
+    //создание массива из нодлиста
+    let arrayFromNodelist = Array.from(portfolioList);
+    console.log(arrayFromNodelist);
+    //шафл нового массива
+    let newPortfolioList = arrayFromNodelist.sort(() => Math.random() - 0.5);
+    console.log(newPortfolioList);
+    //беру перента 
+    const ulContainerParent = document.querySelector('ul.container');
+    console.log(ulContainerParent);
+    //удаляю всё его содержимое
+    ulContainerParent.innerHTML = '';
+    //вставляю массив
+    ulContainerParent.append(...newPortfolioList);
+}
 
 /*-----------------------------section slider---------------------------------*/
 
