@@ -1,14 +1,16 @@
-const MENU = document.getElementById('navigation');
-const PORTFOLIO = document.getElementById('portfolio-nav');
+const menu = document.getElementById('navigation');
 
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
+
+menu.addEventListener('click', (event) => {
+    menu.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
     event.target.classList.add('active-link');
 })
 
-PORTFOLIO.addEventListener('click', (event) => {
+/*-----------------------------section portfolio---------------------------------*/
+const portfolio = document.getElementById('portfolio-nav');
+portfolio.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
-        PORTFOLIO.querySelectorAll('li').forEach(elem => elem.classList.remove('portfolio-active-link'));
+        portfolio.querySelectorAll('li').forEach(elem => elem.classList.remove('portfolio-active-link'));
         event.target.classList.add('portfolio-active-link');
         shuffleArray();
     }
@@ -17,21 +19,25 @@ PORTFOLIO.addEventListener('click', (event) => {
 const shuffleArray = () => {
     //создание нодлиста
     let portfolioList = document.querySelectorAll('.container li:nth-child(-n+12)');
-    console.log(portfolioList);
     //создание массива из нодлиста
     let arrayFromNodelist = Array.from(portfolioList);
-    console.log(arrayFromNodelist);
     //шафл нового массива
     let newPortfolioList = arrayFromNodelist.sort(() => Math.random() - 0.5);
-    console.log(newPortfolioList);
     //беру перента 
     const ulContainerParent = document.querySelector('ul.container');
-    console.log(ulContainerParent);
     //удаляю всё его содержимое
     ulContainerParent.innerHTML = '';
     //вставляю массив
     ulContainerParent.append(...newPortfolioList);
 }
+
+//выделение проектов
+const projects = document.querySelector('ul.container');
+
+projects.addEventListener('click', (event) => {
+    projects.querySelectorAll('img').forEach(elem => elem.classList.remove('projects-link-clicked'));
+    event.target.classList.add('projects-link-clicked');
+})
 
 /*-----------------------------section slider---------------------------------*/
 
@@ -80,27 +86,27 @@ function rigthArrow() {
 }
 
 /*-----------leftArrow----------*/
-function leftArrow() {
-    leftArrowBtn.removeEventListener('click', leftArrow);
-    let slidesVisible = document.querySelectorAll('.slide-single');
-    let offset2 = 0;
-    for (let i = 0; i < slidesVisible.length; i++) {
-        slidesVisible[i].style.right = offset2 * 800 + 800 + 'px';
-        offset2++;
-    }
-    setTimeout(function () {
-        slidesVisible[0].remove();
-        draw();
-        leftArrowBtn.addEventListener('click', leftArrow);
-    }, 1000)
+// function leftArrow() {
+//     leftArrowBtn.removeEventListener('click', leftArrow);
+//     let slidesVisible = document.querySelectorAll('.slide-single');
+//     let offset2 = 0;
+//     for (let i = 0; i < slidesVisible.length; i++) {
+//         slidesVisible[i].style.right = offset2 * 800 + 800 + 'px';
+//         offset2++;
+//     }
+//     setTimeout(function () {
+//         slidesVisible[0].remove();
+//         draw();
+//         leftArrowBtn.addEventListener('click', leftArrow);
+//     }, 1000)
 
-}
+// }
 
 
-const SLIDER_BACKGROUND = document.querySelector('.slider');
+const slider_background = document.querySelector('.slider');
 
 function backGroundColoring() {
-    SLIDER_BACKGROUND.classList.toggle('bg_blue');
+    slider_background.classList.toggle('bg_blue');
 }
 
 draw();
@@ -158,10 +164,10 @@ function removeHorizontalHTML() {
 }
 
 /*----------form submit--------------*/
-const BUTTON = document.getElementById('submit-button');
-const CLOSE_BUTTON = document.getElementById('close-button');
+const button = document.getElementById('submit-button');
+const close_button = document.getElementById('close-button');
 
-BUTTON.addEventListener('click', () => {
+button.addEventListener('click', () => {
     if (document.getElementById('name').value !== '' && document.getElementById('email').value !== '') {
         const subject = document.getElementById('subject-input').value.toString();
         if (subject !== '') {
@@ -180,7 +186,7 @@ BUTTON.addEventListener('click', () => {
     }
 })
 
-CLOSE_BUTTON.addEventListener('click', () => {
+close_button.addEventListener('click', () => {
     document.getElementById('subject-result').innerText = '';
     document.getElementById('description-result').innerText = '';
     document.querySelector('.message-block').classList.add('hidden');
