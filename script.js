@@ -1,16 +1,43 @@
-const MENU = document.getElementById('navigation');
-const PORTFOLIO = document.getElementById('portfolio-nav');
+const menu = document.getElementById('navigation');
 
-MENU.addEventListener('click', (event) => {
-    MENU.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
+
+menu.addEventListener('click', (event) => {
+    menu.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
     event.target.classList.add('active-link');
 })
 
-PORTFOLIO.addEventListener('click', (event) => {
-    PORTFOLIO.querySelectorAll('li').forEach(elem => elem.classList.remove('portfolio-active-link'));
+/*-----------------------------section portfolio---------------------------------*/
+
+const portfolio = document.getElementById('portfolio-nav');
+portfolio.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
+        portfolio.querySelectorAll('li').forEach(elem => elem.classList.remove('portfolio-active-link'));
         event.target.classList.add('portfolio-active-link');
+        shuffleArray();
     }
+})
+
+const shuffleArray = () => {
+    //создание нодлиста
+    let portfolioList = document.querySelectorAll('.container li:nth-child(-n+12)');
+    //создание массива из нодлиста
+    let arrayFromNodelist = Array.from(portfolioList);
+    //шафл нового массива
+    let newPortfolioList = arrayFromNodelist.sort(() => Math.random() - 0.5);
+    //беру перента 
+    const ulContainerParent = document.querySelector('ul.container');
+    //удаляю всё его содержимое
+    ulContainerParent.innerHTML = '';
+    //вставляю массив
+    ulContainerParent.append(...newPortfolioList);
+}
+
+//выделение проектов
+const projects = document.querySelector('ul.container');
+
+projects.addEventListener('click', (event) => {
+    projects.querySelectorAll('img').forEach(elem => elem.classList.remove('projects-link-clicked'));
+    event.target.classList.add('projects-link-clicked');
 })
 
 /*-----------------------------section slider---------------------------------*/
@@ -25,10 +52,10 @@ for (let i = 0; i < slides.length; i++) {
     slides[i].remove();
 }
 
-let step = 0;
-let offset = 0;
+let step = 0; //шаг
+let offset = 0; //смешение изображения
 
-function draw() {
+function drawRight() {
     let divSlide = document.createElement('div');
     divSlide = slider[step];
     divSlide.classList.add('slide-single');
@@ -43,9 +70,11 @@ function draw() {
 }
 
 /*-----------rightArrow----------*/
+
 function rigthArrow() {
     rigthArrowBtn.removeEventListener('click', rigthArrow);
     let slidesVisible = document.querySelectorAll('.slide-single');
+    console.log(slidesVisible);
     let offset2 = 0;
     for (let i = 0; i < slidesVisible.length; i++) {
         slidesVisible[i].style.left = offset2 * 800 - 800 + 'px';
@@ -53,42 +82,27 @@ function rigthArrow() {
     }
     setTimeout(function () {
         slidesVisible[0].remove();
-        draw();
+        drawRight();
         rigthArrowBtn.addEventListener('click', rigthArrow);
     }, 1000)
-
 }
 
-/*-----------leftArrow----------*/
-function leftArrow() {
-    leftArrowBtn.removeEventListener('click', leftArrow);
-    let slidesVisible = document.querySelectorAll('.slide-single');
-    let offset2 = 0;
-    for (let i = 0; i < slidesVisible.length; i++) {
-        slidesVisible[i].style.right = offset2 * 800 + 800 + 'px';
-        offset2++;
-    }
-    setTimeout(function () {
-        slidesVisible[0].remove();
-        draw();
-        leftArrowBtn.addEventListener('click', leftArrow);
-    }, 1000)
-
-}
+drawRight();
+drawRight();
+rigthArrowBtn.addEventListener('click', rigthArrow);
 
 
-const SLIDER_BACKGROUND = document.querySelector('.slider');
+
+//изменение bg
+const slider_background = document.querySelector('.slider');
 
 function backGroundColoring() {
-    SLIDER_BACKGROUND.classList.toggle('bg_blue');
+    slider_background.classList.toggle('bg_blue');
 }
+rigthArrowBtn.addEventListener('click', function () {
+    setTimeout(backGroundColoring, 300)
+});
 
-draw();
-draw();
-rigthArrowBtn.addEventListener('click', rigthArrow);
-rigthArrowBtn.addEventListener('click', backGroundColoring);
-leftArrowBtn.addEventListener('click', leftArrow);
-leftArrowBtn.addEventListener('click', backGroundColoring);
 
 
 /*----------off/on phone screens--------------*/
@@ -138,10 +152,10 @@ function removeHorizontalHTML() {
 }
 
 /*----------form submit--------------*/
-const BUTTON = document.getElementById('submit-button');
-const CLOSE_BUTTON = document.getElementById('close-button');
+const button = document.getElementById('submit-button');
+const close_button = document.getElementById('close-button');
 
-BUTTON.addEventListener('click', () => {
+button.addEventListener('click', () => {
     if (document.getElementById('name').value !== '' && document.getElementById('email').value !== '') {
         const subject = document.getElementById('subject-input').value.toString();
         if (subject !== '') {
@@ -160,7 +174,7 @@ BUTTON.addEventListener('click', () => {
     }
 })
 
-CLOSE_BUTTON.addEventListener('click', () => {
+close_button.addEventListener('click', () => {
     document.getElementById('subject-result').innerText = '';
     document.getElementById('description-result').innerText = '';
     document.querySelector('.message-block').classList.add('hidden');

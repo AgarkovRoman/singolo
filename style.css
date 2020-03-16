@@ -325,6 +325,7 @@ header {
 
 .portfolio-nav {
     margin-bottom: 22px;
+    user-select: none;
 }
 
 ul {
@@ -354,7 +355,8 @@ ul {
 }
 
 .portfolio-active-link {
-    color: #dedede;
+    color: #262933;
+    background: #dedede;
     border: 1px solid #dedede;
 }
 
@@ -370,8 +372,8 @@ ul {
     display: none;
 }
 
-.projects-link img:hover {
-    border: 2px solid #666d89;
+.projects-link-clicked {
+    border: 5px solid #F06C64;
 }
 
 /*------------About us--------------*/
@@ -573,7 +575,7 @@ ul {
 
 .message-text {
     width: 30vw;
-    min-height: 100px;
+    min-height: 200px;
     position: absolute;
     border: 1px solid #972f2a;
     background: #bb4a44;
@@ -586,12 +588,6 @@ ul {
     margin-bottom: 3px;
     font-size: 14px;
     color: #f0d8d9;
-}
-
-.message-text p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #220808;
 }
 
 .hidden {
