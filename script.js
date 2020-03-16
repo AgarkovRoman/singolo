@@ -7,6 +7,7 @@ menu.addEventListener('click', (event) => {
 })
 
 /*-----------------------------section portfolio---------------------------------*/
+
 const portfolio = document.getElementById('portfolio-nav');
 portfolio.addEventListener('click', (event) => {
     if (event.target.tagName === 'LI') {
@@ -51,10 +52,10 @@ for (let i = 0; i < slides.length; i++) {
     slides[i].remove();
 }
 
-let step = 0;
-let offset = 0;
+let step = 0; //шаг
+let offset = 0; //смешение изображения
 
-function draw() {
+function drawRight() {
     let divSlide = document.createElement('div');
     divSlide = slider[step];
     divSlide.classList.add('slide-single');
@@ -69,9 +70,11 @@ function draw() {
 }
 
 /*-----------rightArrow----------*/
+
 function rigthArrow() {
     rigthArrowBtn.removeEventListener('click', rigthArrow);
     let slidesVisible = document.querySelectorAll('.slide-single');
+    console.log(slidesVisible);
     let offset2 = 0;
     for (let i = 0; i < slidesVisible.length; i++) {
         slidesVisible[i].style.left = offset2 * 800 - 800 + 'px';
@@ -79,42 +82,27 @@ function rigthArrow() {
     }
     setTimeout(function () {
         slidesVisible[0].remove();
-        draw();
+        drawRight();
         rigthArrowBtn.addEventListener('click', rigthArrow);
     }, 1000)
-
 }
 
-/*-----------leftArrow----------*/
-// function leftArrow() {
-//     leftArrowBtn.removeEventListener('click', leftArrow);
-//     let slidesVisible = document.querySelectorAll('.slide-single');
-//     let offset2 = 0;
-//     for (let i = 0; i < slidesVisible.length; i++) {
-//         slidesVisible[i].style.right = offset2 * 800 + 800 + 'px';
-//         offset2++;
-//     }
-//     setTimeout(function () {
-//         slidesVisible[0].remove();
-//         draw();
-//         leftArrowBtn.addEventListener('click', leftArrow);
-//     }, 1000)
-
-// }
+drawRight();
+drawRight();
+rigthArrowBtn.addEventListener('click', rigthArrow);
 
 
+
+//изменение bg
 const slider_background = document.querySelector('.slider');
 
 function backGroundColoring() {
     slider_background.classList.toggle('bg_blue');
 }
+rigthArrowBtn.addEventListener('click', function () {
+    setTimeout(backGroundColoring, 300)
+});
 
-draw();
-draw();
-rigthArrowBtn.addEventListener('click', rigthArrow);
-rigthArrowBtn.addEventListener('click', backGroundColoring);
-leftArrowBtn.addEventListener('click', leftArrow);
-leftArrowBtn.addEventListener('click', backGroundColoring);
 
 
 /*----------off/on phone screens--------------*/
