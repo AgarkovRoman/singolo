@@ -102,7 +102,9 @@ function backGroundColoring() {
 rigthArrowBtn.addEventListener('click', function () {
     setTimeout(backGroundColoring, 300)
 });
-
+leftArrowBtn.addEventListener('click', function () {
+    setTimeout(backGroundColoring, 300)
+});
 
 
 /*----------off/on phone screens--------------*/
