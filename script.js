@@ -36,8 +36,10 @@ const shuffleArray = () => {
 const projects = document.querySelector('ul.container');
 
 projects.addEventListener('click', (event) => {
-    projects.querySelectorAll('img').forEach(elem => elem.classList.remove('projects-link-clicked'));
-    event.target.classList.add('projects-link-clicked');
+    if (event.target.tagName === 'IMG') {
+        projects.querySelectorAll('img').forEach(elem => elem.classList.remove('projects-link-clicked'));
+        event.target.classList.add('projects-link-clicked');
+    }
 })
 
 /*-----------------------------section slider---------------------------------*/
