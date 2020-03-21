@@ -1,8 +1,8 @@
 /*------------Basic setup--------------*/
 
 * {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 html {
@@ -21,12 +21,9 @@ body {
     height: 0;
 }
 
-.wraper {
-    max-width: 1020px;
-    margin: 0 auto;
-}
-
 .wrap {
+    max-width: 940px;
+    margin: 0 auto;
     padding: 0 40px;
 }
 
@@ -367,7 +364,7 @@ ul {
 .container {
     display: grid;
     grid-template-rows: 187px 187px 187px;
-    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
     padding-bottom: 67px;
 }
@@ -378,6 +375,11 @@ ul {
 
 .projects-link-clicked {
     border: 5px solid #F06C64;
+}
+
+.projects-link img {
+    width: 100%;
+    height: auto;
 }
 
 /*------------About us--------------*/
@@ -422,6 +424,8 @@ ul {
 
 .employee-img {
     margin-bottom: 11px;
+    width: 100%;
+    height: auto;
 }
 
 .employee-name {
@@ -644,9 +648,12 @@ ul {
 
 .footer {
     background: #2d303a;
+    color: #666d89;
+}
+
+.footer .wrap {
     display: flex;
     justify-content: space-between;
-    color: #666d89;
 }
 
 .copyright {

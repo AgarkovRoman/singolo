@@ -1,0 +1,98 @@
+@media only screen and (max-width: 1020px) {
+  .wrap {
+    padding: 0 27px;
+  }
+  .logo-h1 {
+    margin-left: 14px;
+  }
+  .nav-link {
+    font-size: 14px;
+  }
+  .iphone-vertical {
+    top: 3rem;
+    width: 11rem;
+  }
+  .iphone-horizontal {
+    left: 14rem;
+    width: 23rem;
+    top: 8rem;
+  }
+  .iphone-left {
+    width: 21%;
+    left: 102px;
+    top: 123px;
+  }
+  .iphone-midle {
+    width: 34%;
+    left: 206px;
+    top: 38px;
+  }
+  .iphone-right {
+    width: 21%;
+    left: 385px;
+    top: 124px;
+  }
+  .slide-single {
+    width: 590px;
+    min-height: 445px;
+  }
+  .main-block {
+    min-height: 445px;
+  }
+  .slider {
+    min-height: 445px;
+  }
+  .block-70 {
+    min-height: 445px;
+  }
+  .block-800 {
+    min-height: 445px;
+  }
+  .right-arrow-img {
+    top: 212px;
+    left: 30px;
+  }
+  .right-arrow-img:hover {
+    zoom: 99%;
+  }
+  .left-arrow-img {
+    top: 212px;
+    left: 4px;
+  }
+  .left-arrow-img:hover {
+    zoom: 99%;
+  }
+  .container {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 15px;
+  }
+  .our-services {
+    padding-top: 41px;
+  }
+  .our-services h2 {
+    margin-left: 16px;
+  }
+  .service-features {
+    justify-content: space-around;
+    padding-bottom: 21px;
+  }
+  .feature {
+    justify-content: flex-start;
+    margin-bottom: 54px;
+    width: 45.9%;
+  }
+  .our-services .our-services-copy {
+    height: 85px;
+  }
+  .portfolio p {
+    height: 45px;
+    margin-bottom: 27px;
+  }
+  .portfolio .wrap {
+    padding: 0 40px;
+  }
+  .about-us {
+    padding-top: 43px;
+  }
+}
