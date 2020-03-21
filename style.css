@@ -364,7 +364,7 @@ ul {
 .container {
     display: grid;
     grid-template-rows: 187px 187px 187px;
-    grid-template-columns: 220px 220px 220px 220px;
+    grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
     padding-bottom: 67px;
 }
@@ -375,6 +375,11 @@ ul {
 
 .projects-link-clicked {
     border: 5px solid #F06C64;
+}
+
+.projects-link img {
+    width: 100%;
+    height: auto;
 }
 
 /*------------About us--------------*/
@@ -419,6 +424,8 @@ ul {
 
 .employee-img {
     margin-bottom: 11px;
+    width: 100%;
+    height: auto;
 }
 
 .employee-name {

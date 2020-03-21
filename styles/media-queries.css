@@ -1,25 +1,21 @@
-/*------------Header--------------*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1020px) {
+  .wrap {
+    padding: 0 27px;
+  }
+  .logo-h1 {
+    margin-left: 14px;
+  }
   .nav-link {
     font-size: 14px;
   }
-  .container {
-    grid-template-rows: 183px 183px 183px 183px;
-    grid-template-columns: 216px 216px 216px;
-    grid-gap: 18px;
-  }
-  .employee-img {
-    width: 218px;
-  }
   .iphone-vertical {
-    left: 10px;
-    top: 75px;
-    width: 32%;
+    top: 3rem;
+    width: 11rem;
   }
   .iphone-horizontal {
-    left: 208px;
-    width: 63%;
-    top: 176px;
+    left: 14rem;
+    width: 23rem;
+    top: 8rem;
   }
   .iphone-left {
     width: 21%;
@@ -38,36 +34,52 @@
   }
   .slide-single {
     width: 590px;
+    min-height: 445px;
   }
   .main-block {
-    min-height: 500px;
+    min-height: 445px;
   }
   .slider {
-    min-height: 500px;
+    min-height: 445px;
   }
   .block-70 {
-    min-height: 500px;
+    min-height: 445px;
+  }
+  .block-800 {
+    min-height: 445px;
   }
   .right-arrow-img {
-    top: 245px;
-    left: 17px;
+    top: 212px;
+    left: 30px;
   }
   .right-arrow-img:hover {
-    zoom: 102%;
-    top: 245px;
-    left: 17px;
+    zoom: 99%;
   }
   .left-arrow-img {
-    top: 245px;
-    left: 12px;
+    top: 212px;
+    left: 4px;
   }
   .left-arrow-img:hover {
-    zoom: 102%;
-    top: 245px;
-    left: 12px;
+    zoom: 99%;
+  }
+  .container {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 15px;
+  }
+  .our-services {
+    padding-top: 41px;
+  }
+  .our-services h2 {
+    margin-left: 16px;
+  }
+  .service-features {
+    justify-content: space-around;
+    padding-bottom: 21px;
   }
   .feature {
-    margin-bottom: 39px;
+    justify-content: flex-start;
+    margin-bottom: 54px;
     width: 45.9%;
   }
   .our-services .our-services-copy {
@@ -75,5 +87,12 @@
   }
   .portfolio p {
     height: 45px;
+    margin-bottom: 27px;
+  }
+  .portfolio .wrap {
+    padding: 0 40px;
+  }
+  .about-us {
+    padding-top: 43px;
   }
 }
