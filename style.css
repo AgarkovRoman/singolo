@@ -80,6 +80,10 @@ header {
     right: -17px;
 }
 
+.burger-menu {
+    display: none;
+}
+
 .nav-link {
     color: #fff;
     font-size: 12px;
@@ -211,15 +215,11 @@ header {
 }
 
 .right-arrow-img:hover {
-    zoom: 120%;
-    top: 230px;
-    left: 35px;
+    top: 275px;
 }
 
 .left-arrow-img:hover {
-    zoom: 120%;
-    top: 230px;
-    left: 2px;
+    top: 275px;
 }
 
 /*------------Section our services--------------*/
