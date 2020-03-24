@@ -107,6 +107,9 @@
   .burger-menu {
     display: block;
   }
+  .burger-menu #burger {
+    display: none;
+  }
   .header-nav-list {
     display: none;
   }

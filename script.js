@@ -1,6 +1,5 @@
 const menu = document.getElementById('navigation');
 
-
 menu.addEventListener('click', (event) => {
     menu.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
     event.target.classList.add('active-link');
@@ -182,4 +181,29 @@ close_button.addEventListener('click', () => {
     document.getElementById('subject-result').innerText = '';
     document.getElementById('description-result').innerText = '';
     document.querySelector('.message-block').classList.add('hidden');
+})
+
+
+/*-----------------burger menu-----------------------*/
+
+
+//const burger_nav = document.getElementById('burger-navigation');
+
+// burger_nav.addEventListener('click', (event) => {
+//     if (event.target.tagName === 'LI') {
+//         burger_nav.querySelectorAll('li').forEach(elem => elem.style.height = '0');
+//         console.log("burger");
+//         burger_menu.style.height = '0';
+//     }
+// })
+
+const burger_nav = document.getElementById('burger-navigation');
+const burger_menu_nav = document.getElementById('burger-menu-nav');
+
+burger_nav.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+        burger_nav.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
+        event.target.classList.add('active-link');
+        burger_menu_nav.style.height = 0;
+    }
 })
