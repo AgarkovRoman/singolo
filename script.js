@@ -202,4 +202,13 @@ mobile_nav_list.addEventListener('click', (event) => {
 burger_btn.addEventListener('click', (event) => {
     mobile_menu.classList.toggle('hidden');
     burger_btn.classList.toggle('rotate-90');
-})
+});
+
+mobile_menu.addEventListener('click', (event) => {
+    if (!event.target.classList.contains('burger-menu-nav') &&
+        !event.target.classList.contains('mobile-nav-list') &&
+        !event.target.classList.contains('nav-link')) {
+        mobile_menu.classList.toggle('hidden');
+        burger_btn.classList.toggle('rotate-90');
+    }
+});
