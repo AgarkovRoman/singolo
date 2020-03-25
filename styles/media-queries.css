@@ -143,6 +143,18 @@
   .burger-line:not(:last-child) {
     margin-bottom: 6px;
   }
+  .mobile-logo {
+    position: absolute;
+    width: 115px;
+    height: 24px;
+    top: 23px;
+    left: 85px;
+    font-size: 20px;
+  }
+  .mobile-logo-h1::after {
+    content: '*';
+    color: #f06c64;
+  }
   .burger-menu-nav {
     position: absolute;
     font-size: 3rem;
