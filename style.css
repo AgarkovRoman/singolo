@@ -80,9 +80,10 @@ header {
     right: -17px;
 }
 
-.burger-menu {
+/* .mobile-menu {
     display: none;
-}
+    
+} */
 
 .nav-link {
     color: #fff;

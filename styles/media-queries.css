@@ -98,17 +98,15 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .logo-h1 {
+    padding-top: 20px;
+  }
   .slider .wrap {
     padding: 0 10px;
   }
   header {
     height: 65px;
-  }
-  .burger-menu {
-    display: block;
-  }
-  .burger-menu #burger {
-    display: none;
+    position: relative;
   }
   .header-nav-list {
     display: none;
@@ -116,56 +114,74 @@
   .logo {
     margin: 0 auto;
   }
-  .burger-line {
+  .mobile-menu {
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: #0005;
+    position: fixed;
+    height: 100vh;
+    z-index: 2;
+  }
+  .burger-lines {
+    top: 25px;
+    left: 25px;
     position: absolute;
     width: 25px;
-    height: 2.4px;
-    left: 20px;
-    top: 26px;
+    cursor: pointer;
+    height: 22px;
+    z-index: 2;
+  }
+  .burger-line {
+    position: relative;
+    width: 100%;
+    height: 3px;
     background: #ffffff;
     border-radius: 5px;
+    z-index: 1;
   }
-  .burger-line:last-child {
-    top: 43.6px;
-  }
-  .burger-line:nth-child(2) {
-    top: 34.8px;
+  .burger-line:not(:last-child) {
+    margin-bottom: 6px;
   }
   .burger-menu-nav {
     position: absolute;
     font-size: 3rem;
     width: 80vw;
-    height: 0;
-    top: 55px;
+    height: 100vh;
+    top: 0px;
     left: 0;
     background: #2D303A;
-    z-index: 2;
     transition: .5s;
     overflow: hidden;
-  }
-  #burger:checked ~ .burger-menu-nav {
-    height: 100vh;
+    z-index: 2;
     display: flex;
     text-align: left;
     justify-content: center;
+    box-shadow: 5px -5px 5px 0px rgba(22, 22, 30, 0.43);
   }
-  #burger:checked ~ .burger-menu-nav .header-nav-list {
+  .mobile-nav-list {
     display: block;
-    float: none;
     margin-top: 15vh;
   }
-  #burger:checked ~ .burger-menu-nav .header-nav-list li {
+  .mobile-nav-list li {
     display: block;
     margin-top: 25px;
   }
-  #burger:checked ~ .burger-menu-nav .header-nav-list li:not(:last-child):after {
+  .mobile-nav-list li:not(:last-child):after {
     display: none;
   }
-  #burger:not(checked) ~ .burger-menu-nav {
-    height: 0;
+  .hidden {
+    display: none;
+  }
+  .rotate-90 {
+    transform: rotate(90deg);
+    transition: ease-out 0.3s;
+  }
+  .header-nav li {
+    margin-left: 0;
   }
   .nav-link {
-    font-size: 2rem;
+    font-size: 25px;
   }
   .iphone-vertical {
     top: 1rem;
