@@ -1,6 +1,5 @@
 const menu = document.getElementById('navigation');
 
-
 menu.addEventListener('click', (event) => {
     menu.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
     event.target.classList.add('active-link');
@@ -182,4 +181,25 @@ close_button.addEventListener('click', () => {
     document.getElementById('subject-result').innerText = '';
     document.getElementById('description-result').innerText = '';
     document.querySelector('.message-block').classList.add('hidden');
+})
+
+
+/*-----------------burger menu-----------------------*/
+
+const burger_btn = document.querySelector('.burger-lines');
+const mobile_menu = document.querySelector('.mobile-menu');
+const mobile_nav_list = document.querySelector('.mobile-nav-list');
+
+mobile_nav_list.addEventListener('click', (event) => {
+    if (event.target.tagName === 'A') {
+        mobile_nav_list.querySelectorAll('a').forEach(elem => elem.classList.remove('active-link'));
+        event.target.classList.add('active-link');
+        mobile_menu.classList.toggle('hidden');
+        burger_btn.classList.toggle('rotate-90');
+    }
+});
+
+burger_btn.addEventListener('click', (event) => {
+    mobile_menu.classList.toggle('hidden');
+    burger_btn.classList.toggle('rotate-90');
 })
